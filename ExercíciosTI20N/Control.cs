@@ -72,7 +72,13 @@ namespace ExercíciosTI20N
                              "49.Exercício 49\n" +
                              "50.Exercício 50\n" +
                              "51.Exercicio 51\n" +
-                             "52.Exercicio 52\n");
+                             "52.Exercicio 52\n" +
+                             "53.Exercicio 53\n" +
+                             "54.Exercicio 54\n" +
+                             "55.Exercicio 55\n" +
+                             "56.Exercicio 56\n" +
+                             "57.Exercicio 57\n" +
+                             "58.Exercicio 58\n");
         }
             public void Operacao()
             {
@@ -388,12 +394,30 @@ namespace ExercíciosTI20N
                         case 50:
                             modelo.ExercicioCinquenta();
                             break;
-                    case 51:
+                        case 51:
                             modelo.ExercicioCinquentaUm();
+                            break;
+                        case 52:
+                            Console.WriteLine("A média do vetor é: " + modelo.ExercicioCinquentaDois());
+                            break;
+                        case 53:
+                            modelo.ExercicioCinquentaTres();
+                            break;
+                        case 54:
+                            modelo.ExercicioCinquentaQuatro();
+                            break;
+                        case 55:
+                            modelo.ExercicioCinquentaCinco();
+                            break;
+                    case 56:
+                        Console.WriteLine("A soma dos vetores é: " + modelo.ExercicioCinquentaSeis());
                         break;
-                    case 52:
-                        Console.WriteLine("A média do vetor é: " + modelo.ExercicioCinquentaDois());
-                        break;  
+                    case 57:
+                        modelo.ExercicioCinquentaSete();
+                        break;
+                    case 58:
+                        Console.WriteLine(modelo.ExercicioCinquentaOito());
+                        break;
 
                     default:
                             Console.WriteLine("Código digitado não é valido!");
