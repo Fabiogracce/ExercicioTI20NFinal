@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.Globalization;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Runtime.InteropServices;
@@ -15,7 +16,7 @@ namespace ExercíciosTI20N
 {
     class Model
     {
- 
+
         //Contrutor
         public Model()
         {
@@ -879,7 +880,7 @@ namespace ExercíciosTI20N
             Console.WriteLine($"Tempo gasto na viagem: {tempoViagem} horas");
             Console.WriteLine($"Velocidade média: {velocidadeMedia} km/h");
             Console.WriteLine($"Distância percorrida: {distanciaPercorrida} km");
-            Console.WriteLine($"Quantidade de litros utilizada na viagem: {litrosUtilizados:F2} litros");   
+            Console.WriteLine($"Quantidade de litros utilizada na viagem: {litrosUtilizados:F2} litros");
         }//Fim do Exercício Cinquenta
 
 
@@ -892,21 +893,21 @@ namespace ExercíciosTI20N
         {
             int[] vet = new int[4];//declarando vetor
             //preenchendo vetor
-            for(int i = 0; i < 4; i++) 
+            for (int i = 0; i < 4; i++)
             {
 
                 Console.WriteLine((i + 1) + "º Número: ");
-                vet[i] = Convert.ToInt32(Console.ReadLine());           
-            
+                vet[i] = Convert.ToInt32(Console.ReadLine());
+
             }
             //Mostrar o vetor
-            for (int i = 0; i < 4; i++) 
-            { 
+            for (int i = 0; i < 4; i++)
+            {
                 Console.WriteLine((i + 1) + "º Posição: " + vet[i]);
-            
+
             }
-                       
-        
+
+
         }//fim do metodo
 
         //Exercício 52: Faça um programa que crie um vetor de números inteiros e
@@ -921,16 +922,16 @@ namespace ExercíciosTI20N
             int i = 0;
             //Preenchimento
             for (i = 0; i < 4; i++)
-        {
+            {
                 Console.WriteLine((i + 1) + "º Posição:");
                 vetvet[1] = Convert.ToInt32(Console.ReadLine());
                 soma += vetvet[1];//somando
-                       
-        }
 
-            return soma / i;            
-        
-        
+            }
+
+            return soma / i;
+
+
         }//fim do metodo
 
         //Exercício 53:  Faça um programa que crie um vetor de números inteiros e
@@ -1007,7 +1008,7 @@ namespace ExercíciosTI20N
 
         //Exercício 55: Faça um programa que crie um vetor de números inteiros e
         //imprima os elementos na ordem inversa.
-        
+
         public int ExercicioCinquentaSeis()
         {
             int[] vet = new int[5];
@@ -1027,9 +1028,9 @@ namespace ExercíciosTI20N
 
         public void ExercicioCinquentaSete()
         {
-            int[]vet = new int[5];
-            int[]vet1 = new int[5];
-            int[]vet2 = new int[5];
+            int[] vet = new int[5];
+            int[] vet1 = new int[5];
+            int[] vet2 = new int[5];
             int soma = 0;
             int i = 0;
 
@@ -1092,20 +1093,64 @@ namespace ExercíciosTI20N
         //elementos repetidos desse vetor, deixando apenas uma ocorrência de cada valor.
 
         public void ExercicioCinquentaNove()
-        
         {
             int[] vet = new int[5];
-            int i = 0;
+
             for (int i = 0; i < 5; i++)
             {
                 Console.WriteLine((i + 1) + "º número: ");
                 vet[i] = Convert.ToInt32(Console.ReadLine());
-            }//fim do for
+            }
+            //Removendo os elementos repetidos
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = i + 1; j < 5; j++) 
+                {
+                if (vet[i] == vet[j])
+                {
+                    vet[j] = 0;
+                }
 
+            }
 
+        }
+         for (int i = 0; i < 5;i++)
+        {
+           Console.WriteLine((i + 1) + "º Posição: " + vet[i]);
+            
+        }
+
+    }
+        //Exercício 60: Faça um programa que crie um vetor de strings e
+        //imprima todos os elementos desse vetor em ordem alfabética.
+        public void ExercicioSessenta()
+        {
+            string[] vet = { "maçã", "uva", "laranja", "jabuticaba", "abacaxi" };
+
+            //Ordenando o vetor em ordem alfabética
+            Array.Sort(vet);
+
+            Console.WriteLine("Elemento do Vetor em ordem alfabética: ");
+            foreach (string elemento in vet)
+            {
+                Console.WriteLine(elemento);
+            }
+        }//Fim do Exercicio 60
+
+        //Exercício 61: Faça um programa que crie um vetor de números inteiros e
+        //verifique quantas vezes um determinado valor aparece no vetor.
+
+        public void ExercicioSessentaUm() 
+        {
+            int[] vet = new int[5];
 
 
         }
+
+
+        
+
+
 
 
 
